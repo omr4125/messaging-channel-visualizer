@@ -1,0 +1,64 @@
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+out/
+
+# Gradle wrapper (keep the jar)
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local Gradle cache
+gradle-app.setting
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+.intellijPlatform
+*.iml
+*.ipr
+*.iws
+out/
+
+# IntelliJ workspace-specific
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/libraries
+
+# =========================
+# Kotlin
+# =========================
+.kotlin/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# =========================
+# Environment / local configs
+# =========================
+.env
+.env.*
+
+# =========================
+# Mac / Linux editor files
+# =========================
+.vscode/

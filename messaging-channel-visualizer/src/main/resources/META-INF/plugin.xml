@@ -1,0 +1,58 @@
+<idea-plugin>
+    <id>messaging.channel.visualizer</id>
+    <name>Messaging Channel Visualizer</name>
+    <version>1.0.1</version>
+    <vendor email="example@gmail.com">muster name</vendor>
+
+    <idea-version since-build="231" until-build="253.*"/>
+
+    <description>
+        <![CDATA[
+        <p>Visualizes messaging broker channel configurations defined in <code>application.properties</code> files.</p>
+
+        <p>Supports:</p>
+        <ul>
+            <li><b>Quarkus</b> — MicroProfile Reactive Messaging (AMQP, Kafka, RabbitMQ)</li>
+            <li><b>Spring Cloud Stream</b> — Kafka and RabbitMQ bindings</li>
+            <li><b>Spring Kafka</b> — Native consumer/producer/listener configuration</li>
+            <li><b>Spring RabbitMQ</b> — Native listener configuration</li>
+        </ul>
+
+        <p>Features:</p>
+        <ul>
+            <li>Incoming and outgoing channels displayed in a sortable, color-coded table</li>
+            <li>Profile-aware parsing (e.g. <code>%dev.</code>, <code>%prod.</code>)</li>
+            <li>In-table editing — changes are written back to the properties file automatically</li>
+            <li>Live refresh on file save and while typing</li>
+            <li>Detail panel showing all raw properties for a selected channel</li>
+        </ul>
+        ]]>
+    </description>
+
+    <change-notes>
+        <![CDATA[
+        <b>1.0.0</b>
+        <ul>
+            <li>Initial release</li>
+            <li>Parse and visualize Quarkus, Spring Cloud Stream, Spring Kafka, and Spring RabbitMQ channels</li>
+            <li>Color-coded incoming/outgoing direction indicators</li>
+            <li>In-table editing with automatic write-back to application.properties</li>
+            <li>Live refresh on file changes and keystrokes</li>
+            <li>Profile prefix support</li>
+        </ul>
+        ]]>
+    </change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+                id="Messaging Channel Visualizer"
+                anchor="right"
+                factoryClass="messaging.channel.visualizer.MessagingToolWindowFactory"
+                icon="/icons/brokerView.svg"
+                canCloseContents="false"
+        />
+    </extensions>
+</idea-plugin>
+
